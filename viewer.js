@@ -27,7 +27,7 @@
     return new Blob(chunks);
   }
   async function main() {
-    const parts = await Promise.all(['model-1.bin','model-2.bin','model-3.bin','model-4.bin'].map(download));
+    const parts = await Promise.all(['model-1.bin','model-2.bin','model-3a.bin','model-3b.bin','model-4.bin'].map(download));
     if (received !== total) throw new Error('Modèle incomplet');
     status.textContent = 'Préparation de la visualisation 3D…';
     const ready = customElements.whenDefined('model-viewer');
